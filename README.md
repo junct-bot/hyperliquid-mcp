@@ -1,51 +1,41 @@
 # Hyperliquid MCP Server
 
-Hosted MCP server for **Hyperliquid** — giving AI agents direct access to Hyperliquid analytics data and operations.
+MCP server for Hyperliquid. Agent-ready API for Hyperliquid.
 
-> Powered by [Junct](https://junct.dev) — the agent-readiness layer for DeFi.
+Hosted at [hyperliquid.mcp.junct.dev/mcp](https://hyperliquid.mcp.junct.dev/mcp). Free to use. No auth. No API key required.
 
-## Quick Connect
+Part of [Junct](https://junct.dev) — the agent-readiness layer for web3.
 
-Add to your MCP client config (Claude Desktop, Cursor, Windsurf, etc.):
+## Quick Start
+
+Add to your MCP client config (Claude Desktop, Cursor, Windsurf):
 
 ```json
 {
   "mcpServers": {
     "hyperliquid": {
-      "url": "https://hyperliquid.mcp.junct.dev/mcp"
+      "url": "https://hyperliquid.mcp.junct.dev/mcp",
+      "transport": "streamable-http"
     }
   }
 }
 ```
 
-**No setup required** — the server is hosted and maintained by Junct.
+## About
 
-## Endpoint
+This MCP server is **deterministically generated** from the Hyperliquid API specification. Every tool maps 1:1 to a real API endpoint — no hallucinated endpoints.
 
-| | |
-|---|---|
-| MCP URL | `https://hyperliquid.mcp.junct.dev/mcp` |
-| Transport | Streamable HTTP |
-| Domain | analytics |
-| Tools | 2 |
-| Docs | [llms.txt](https://hyperliquid.mcp.junct.dev/llms.txt) |
-| OpenAPI | [openapi.json](https://hyperliquid.mcp.junct.dev/openapi.json) |
-
-## Tools (2)
-
-| Tool | Description |
-|---|---|
-| `query_info` | Query information endpoint — Unified endpoint for querying various types of information. The request body `type` field d |
-| `execute_exchange` | Execute exchange operations — Unified endpoint for all trading and account operations. Requires EIP-712 signature for au |
+- **Protocol:** Hyperliquid
+- **Endpoint:** `https://hyperliquid.mcp.junct.dev/mcp`
+- **Transport:** Streamable HTTP
+- **Auth:** None required
+- **Documentation:** [hyperliquid.mcp.junct.dev/llms.txt](https://hyperliquid.mcp.junct.dev/llms.txt)
 
 ## Links
 
 - [Junct Dashboard](https://junct.dev/servers/hyperliquid)
-- [Server Info](https://hyperliquid.mcp.junct.dev/)
 - [llms.txt](https://hyperliquid.mcp.junct.dev/llms.txt)
 - [agents.md](https://hyperliquid.mcp.junct.dev/agents.md)
-- [MCP Discovery](https://hyperliquid.mcp.junct.dev/.well-known/mcp/server.json)
+- [OpenAPI spec](https://hyperliquid.mcp.junct.dev/openapi.json)
 
----
-
-*This server is automatically generated, hosted, and maintained by [Junct](https://junct.dev).*
+Keywords: Hyperliquid, MCP server, DeFi, AI agent, agent-ready API, crypto tools, Model Context Protocol
